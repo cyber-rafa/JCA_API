@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(120deg, #0f0f0f, #1b1b1b);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00ffe0, #0077ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #cccccc;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 14px;
+            max-width: 800px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #e6e6e6;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        img {
+            width: 900px;     
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Como funciona uma API</h1>
+    <h2>Abra o Postman para fazer as requisições</h2>
+
+    <img src="{{ url_for('static', filename='api.png') }}" alt="API Fluxo">
+
+    <div class="card">
+        <h3>
+            <strong>GET:</strong> Busca informações no servidor.  
+            Exemplo: retornar todos os alunos → <code>/alunos</code>.
+        </h3>
+    </div>
+
+    <div class="card">
+        <h3>
+            <strong>POST:</strong> Envia informações para o servidor.  
+            Exemplo: cadastrar um novo aluno → <code>/alunos</code> com corpo JSON.
+        </h3>
+    </div>
+
+    <div class="card">
+        <h3>
+            <strong>PUT:</strong> Atualiza uma informação existente.  
+            Exemplo: atualizar dados do aluno → <code>/alunos/id</code> com JSON atualizado.
+        </h3>
+    </div>
+
+    <div class="card">
+        <h3>
+            <strong>DELETE:</strong> Remove uma informação no servidor.  
+            Exemplo: deletar aluno → <code>/alunos/id</code>.
+        </h3>
+    </div>
+
+</body>
+</html>
